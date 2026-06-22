@@ -6,18 +6,7 @@ import matplotlib.pyplot as plt
 from scipy.ndimage import maximum_filter
 from collections import Counter
 import os
-import gdown
-FOLDER_ID = "1UV96lMDwvP-N5Zur6tOPx5OwA6vaDs8N"
-SONGS_DIR = "songs"
- 
-if not os.path.exists(SONGS_DIR) or len(os.listdir(SONGS_DIR)) == 0:
-    os.makedirs(SONGS_DIR, exist_ok=True)
-    gdown.download_folder(
-        id=FOLDER_ID,
-        output=SONGS_DIR,
-        quiet=False,
-        use_cookies=False
-    )
+
 
 
 def generate_fingerprints(song_file):
